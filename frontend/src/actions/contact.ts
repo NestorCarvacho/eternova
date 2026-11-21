@@ -23,17 +23,6 @@ export async function submitContact(
     return { ok: true, message: t("success"), nonce: Date.now() };
   }
 
-  const startedRaw = String(formData.get("started_at") ?? "").trim();
-  const startedAt = Number(startedRaw);
-  if (
-    startedRaw &&
-    Number.isFinite(startedAt) &&
-    startedAt > 0 &&
-    Date.now() - startedAt < 1500
-  ) {
-    return fail("message", t("errors.fastSubmit"));
-  }
-
   const name = String(formData.get("name") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
   const phone = String(formData.get("phone") ?? "").trim();

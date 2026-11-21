@@ -17,8 +17,6 @@ export function ContactForm({
   const [state, formAction, pending] = useActionState(submitContact, initialContactState);
   const formRef = useRef<HTMLFormElement>(null);
   const dirty = useRef(false);
-  const formStartedAt = useRef(String(Date.now()));
-
   useEffect(() => {
     if (!state.field) return;
     document.getElementById(state.field)?.focus();
@@ -50,12 +48,6 @@ export function ContactForm({
       <div hidden>
         <label htmlFor="company">{labels.company}</label>
         <input id="company" name="company" tabIndex={-1} autoComplete="off" />
-        <input
-          type="hidden"
-          name="started_at"
-          defaultValue={formStartedAt.current}
-          readOnly
-        />
       </div>
 
       <Field
