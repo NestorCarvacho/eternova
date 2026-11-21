@@ -1,6 +1,7 @@
 "use server";
 
 import { getLocale, getTranslations } from "next-intl/server";
+import { resolveBackendUrl } from "@/lib/backend-url";
 import { services } from "@/lib/site";
 import type { ContactField, ContactState } from "@/lib/contact";
 
@@ -47,7 +48,7 @@ export async function submitContact(
     return fail("message", t("errors.message"));
   }
 
-  const apiUrl = process.env.API_URL ?? "http://127.0.0.1:8000";
+  const apiUrl = resolveBackendUrl();
 
   try {
     const response = await fetch(`${apiUrl}/api/contact`, {
@@ -65,9 +66,11 @@ export async function submitContact(
     });
 
     if (!response.ok) {
+      console.error("[contact] API responded", response.status, apiUrl);
       return { ok: false, message: t("errors.send"), nonce: Date.now() };
     }
-  } catch {
+  } catch (error) {
+    console.error("[contact] API unreachable", apiUrl, error);
     return { ok: false, message: t("errors.send"), nonce: Date.now() };
   }
 

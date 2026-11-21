@@ -42,12 +42,10 @@ El pack [web-animation-skills](https://github.com/iart-ai/web-animation-skills) 
 
 ## Railway
 
-El sitio y la API viven en carpetas distintas. Railway necesita un servicio para cada uno.
+En Railway, el servicio de la raíz publica **sitio + API de contacto** en un solo contenedor (`railway.toml` → `deploy/Dockerfile.railway`). La API escucha en `127.0.0.1:8000` y Next en el puerto público; no hace falta `API_URL` en el front.
 
-El servicio conectado a la raíz del repositorio publica el sitio con `railway.toml` y `deploy/Dockerfile.frontend`.
+Opcional: API en un segundo servicio con `backend/railway.toml` y `deploy/Dockerfile.frontend` en el sitio; entonces define `API_URL` hacia la API.
 
-Para la API, crea otro servicio del mismo repositorio y, en sus ajustes, apunta el archivo de configuración a `/backend/railway.toml`. Ese archivo no se aplica solo con cambiar el directorio raíz, porque Railway lee la configuración desde la raíz del repositorio.
-
-Agrega Postgres al servicio de la API. `DATABASE_URL` puede llegar como `postgresql://`; la API lo usa con el controlador de psycopg. En el servicio del sitio, `API_URL` es la URL interna de la API y `NEXT_PUBLIC_SITE_URL` es la URL pública del sitio. El correo sigue apagado hasta definir `SMTP_HOST` y `CONTACT_TO`.
+Agrega **PostgreSQL** al proyecto y referencia `DATABASE_URL` en el servicio `eternova`. Variables de **correo** (`SMTP_HOST`, `CONTACT_TO`, etc.): ver `deploy/railway-variables.md`.
 
 Los teléfonos y precios salen de la propuesta visual y hay que confirmarlos.

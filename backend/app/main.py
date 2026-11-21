@@ -24,7 +24,9 @@ def migrate() -> None:
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     migrate()
-    logger.info("database ready")
+    if settings.database_url.startswith("sqlite"):
+        logger.warning("using SQLite; link Postgres on Railway for persistent leads")
+    logger.info("database ready mail=%s", settings.mail_enabled)
     yield
 
 

@@ -11,6 +11,8 @@ class Settings(BaseSettings):
     cors_origins: str = "http://localhost:3000,http://localhost"
     smtp_host: str = ""
     smtp_port: int = 587
+    smtp_use_tls: bool = True
+    smtp_use_ssl: bool = False
     smtp_user: str = ""
     smtp_password: str = ""
     smtp_from: str = ""
