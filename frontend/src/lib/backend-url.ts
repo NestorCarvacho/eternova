@@ -1,5 +1,8 @@
 /** Base URL del servicio FastAPI (sin barra final). Solo servidor. */
 export function resolveBackendUrl(): string {
+  const internal = process.env.API_INTERNAL_URL?.trim();
+  if (internal) return internal.replace(/\/$/, "");
+
   const configured = process.env.API_URL?.trim();
   if (configured) return configured.replace(/\/$/, "");
 

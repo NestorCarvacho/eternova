@@ -25,6 +25,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 ENV API_URL=http://127.0.0.1:8000
+ENV API_INTERNAL_URL=http://127.0.0.1:8000
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends curl ca-certificates gnupg \
@@ -42,7 +43,7 @@ COPY --from=node-builder /app/.next/standalone ./
 COPY --from=node-builder /app/.next/static ./.next/static
 
 COPY deploy/start-railway.sh /start-railway.sh
-RUN chmod +x /start-railway.sh
+RUN sed -i 's/\r$//' /start-railway.sh && chmod +x /start-railway.sh
 
 EXPOSE 3000
 CMD ["/start-railway.sh"]
