@@ -41,6 +41,11 @@ export async function Footer() {
           ))}
         </nav>
       </div>
+      <div className="border-t border-paper/10">
+        <p className="mx-auto w-full max-w-[90rem] px-5 py-5 text-sm text-paper/60 sm:px-8">
+          {t("copyright")}
+        </p>
+      </div>
     </footer>
   );
 }

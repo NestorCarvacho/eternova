@@ -83,6 +83,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               features={asStrings(servicesT.raw(`items.${service.id}.features`))}
               moreLabel={servicesT("more")}
               featuredLabel={servicesT("featured")}
+              detailLink="card"
             />
           ))}
           </StaggerChildren>

@@ -13,6 +13,7 @@ export function ServiceCard({
   features,
   moreLabel,
   featuredLabel,
+  detailLink = "button",
 }: {
   service: Service;
   locale: string;
@@ -22,15 +23,18 @@ export function ServiceCard({
   features: string[];
   moreLabel: string;
   featuredLabel: string;
+  /** En inicio, toda la tarjeta lleva al detalle del plan. */
+  detailLink?: "button" | "card";
 }) {
-  return (
-    <article
-      className={`service-card flex h-full flex-col rounded-2xl bg-paper ${
-        service.featured
-          ? "relative z-10 border-2 border-gold shadow-[0_18px_40px_rgba(7,24,43,0.12)] lg:scale-[1.07]"
-          : "border border-line"
-      }`}
-    >
+  const href = `/servicios/${service.slug}` as const;
+  const cardClass = `service-card flex h-full flex-col rounded-2xl bg-paper ${
+    service.featured
+      ? "relative z-10 border-2 border-gold shadow-[0_18px_40px_rgba(7,24,43,0.12)] lg:scale-[1.07]"
+      : "border border-line"
+  }`;
+
+  const content = (
+    <>
       <div className="relative">
         {service.featured ? (
           <p className="absolute top-3 left-3 z-10 rounded-full bg-gold px-3 py-1 text-sm font-medium text-ink">
@@ -63,18 +67,34 @@ export function ServiceCard({
             </li>
           ))}
         </ul>
-        <Link
-          href={`/servicios/${service.slug}`}
-          className={`motion-press mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 text-sm font-medium ${
-            service.featured
-              ? "bg-ink text-paper hover:bg-ink-soft"
-              : "border border-ink/15 text-ink hover:border-ink"
-          }`}
-        >
-          {moreLabel}
-          <ArrowIcon />
-        </Link>
+        {detailLink === "button" ? (
+          <Link
+            href={href}
+            className={`motion-press mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 text-sm font-medium ${
+              service.featured
+                ? "bg-ink text-paper hover:bg-ink-soft"
+                : "border border-ink/15 text-ink hover:border-ink"
+            }`}
+          >
+            {moreLabel}
+            <ArrowIcon />
+          </Link>
+        ) : null}
       </div>
-    </article>
+    </>
   );
+
+  if (detailLink === "card") {
+    return (
+      <Link
+        href={href}
+        aria-label={`${name}. ${moreLabel}`}
+        className={`${cardClass} motion-press text-inherit no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold`}
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return <article className={cardClass}>{content}</article>;
 }
