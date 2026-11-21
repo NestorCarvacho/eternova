@@ -262,7 +262,8 @@
         "email": "Revise o e-mail. Use o formato nome@email.com.",
         "phone": "Escreva um telefone com pelo menos 8 dígitos.",
         "message": "Conte como podemos ajudar, com pelo menos uma frase.",
-        "send": "Não conseguimos enviar a mensagem. Ligue para +56 2 2345 6789 ou escreva no WhatsApp."
+        "send": "Não conseguimos enviar a mensagem. Ligue para +56 2 2345 6789 ou escreva no WhatsApp.",
+        "fastSubmit": "Aguarde um instante e toque em Enviar novamente."
       }
     }
   },

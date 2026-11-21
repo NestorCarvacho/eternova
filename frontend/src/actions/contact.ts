@@ -23,9 +23,15 @@ export async function submitContact(
     return { ok: true, message: t("success"), nonce: Date.now() };
   }
 
-  const startedAt = Number(formData.get("started_at"));
-  if (!Number.isFinite(startedAt) || Date.now() - startedAt < 2500) {
-    return fail("message", t("errors.send"));
+  const startedRaw = String(formData.get("started_at") ?? "").trim();
+  const startedAt = Number(startedRaw);
+  if (
+    startedRaw &&
+    Number.isFinite(startedAt) &&
+    startedAt > 0 &&
+    Date.now() - startedAt < 1500
+  ) {
+    return fail("message", t("errors.fastSubmit"));
   }
 
   const name = String(formData.get("name") ?? "").trim();

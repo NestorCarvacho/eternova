@@ -262,7 +262,8 @@
         "email": "Check the email. Use the form name@email.com.",
         "phone": "Enter a phone number with at least 8 digits.",
         "message": "Tell us how we can help, in at least one sentence.",
-        "send": "We could not send the message. Call +56 2 2345 6789 or write on WhatsApp."
+        "send": "We could not send the message. Call +56 2 2345 6789 or write on WhatsApp.",
+        "fastSubmit": "Please wait a moment and press Send again."
       }
     }
   },

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type InputHTMLAttributes } from "react";
+import { useEffect, useRef, type InputHTMLAttributes } from "react";
 import { useActionState } from "react";
 import { submitContact } from "@/actions/contact";
 import { initialContactState, type ContactLabels } from "@/lib/contact";
@@ -17,7 +17,7 @@ export function ContactForm({
   const [state, formAction, pending] = useActionState(submitContact, initialContactState);
   const formRef = useRef<HTMLFormElement>(null);
   const dirty = useRef(false);
-  const [startedAt] = useState(() => String(Date.now()));
+  const formStartedAt = useRef(String(Date.now()));
 
   useEffect(() => {
     if (!state.field) return;
@@ -50,7 +50,12 @@ export function ContactForm({
       <div hidden>
         <label htmlFor="company">{labels.company}</label>
         <input id="company" name="company" tabIndex={-1} autoComplete="off" />
-        <input type="hidden" name="started_at" value={startedAt} readOnly />
+        <input
+          type="hidden"
+          name="started_at"
+          defaultValue={formStartedAt.current}
+          readOnly
+        />
       </div>
 
       <Field

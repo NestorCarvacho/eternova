@@ -262,7 +262,8 @@
         "email": "Revisa el correo. Usa el formato nombre@correo.com.",
         "phone": "Escribe un teléfono con al menos 8 dígitos.",
         "message": "Cuéntanos en qué podemos ayudarte, con al menos una frase.",
-        "send": "No pudimos enviar el mensaje. Llámanos al +56 2 2345 6789 o escríbenos por WhatsApp."
+        "send": "No pudimos enviar el mensaje. Llámanos al +56 2 2345 6789 o escríbenos por WhatsApp.",
+        "fastSubmit": "Espera un momento y vuelve a pulsar Enviar."
       }
     }
   },
