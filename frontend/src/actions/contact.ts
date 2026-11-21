@@ -2,6 +2,7 @@
 
 import { headers } from "next/headers";
 import { getLocale, getTranslations } from "next-intl/server";
+import { resolveBackendUrl } from "@/lib/backend-url";
 import { services } from "@/lib/site";
 import type { ContactField, ContactState } from "@/lib/contact";
 
@@ -48,16 +49,16 @@ export async function submitContact(
     return fail("message", t("errors.message"));
   }
 
+  const apiUrl = resolveBackendUrl();
   const requestHeaders = await headers();
-  const port = process.env.PORT?.trim() || "3000";
-  const proxyHeaders: Record<string, string> = {
+  const outboundHeaders: Record<string, string> = {
     "content-type": "application/json",
     accept: "application/json",
   };
   const forwarded = requestHeaders.get("x-forwarded-for");
   const realIp = requestHeaders.get("x-real-ip");
-  if (forwarded) proxyHeaders["x-forwarded-for"] = forwarded;
-  else if (realIp) proxyHeaders["x-forwarded-for"] = realIp;
+  if (forwarded) outboundHeaders["x-forwarded-for"] = forwarded;
+  else if (realIp) outboundHeaders["x-forwarded-for"] = realIp;
 
   const payload = JSON.stringify({
     name,
@@ -69,9 +70,9 @@ export async function submitContact(
   });
 
   try {
-    const response = await fetch(`http://127.0.0.1:${port}/api/contact`, {
+    const response = await fetch(`${apiUrl}/api/contact`, {
       method: "POST",
-      headers: proxyHeaders,
+      headers: outboundHeaders,
       body: payload,
       signal: AbortSignal.timeout(8000),
       cache: "no-store",
