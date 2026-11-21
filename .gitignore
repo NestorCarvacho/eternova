@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.local
+*.db
+backend/data/
+.pytest_cache/
+.mypy_cache/
+*.log
+.DS_Store
+Thumbs.db

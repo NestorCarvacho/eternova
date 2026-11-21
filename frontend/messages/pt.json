@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "siteName": "Eternova",
+    "description": "Organização de uma cremação a partir de casa, com crematórios associados em Santiago.",
+    "heroAlt": "Um lírio branco sobre uma pedra, com Santiago e a cordilheira ao entardecer.",
+    "homeTitle": "Cremação a partir de casa",
+    "homeDescription": "Organize uma cremação a partir de casa. A Eternova coordena documentos, crematório e entrega das cinzas em Santiago.",
+    "servicesTitle": "Escolha o serviço",
+    "servicesDescription": "Três planos de cremação individual em Santiago: Básica, Signature e VIP.",
+    "serviceDescription": "O detalhe do plano, o que inclui e o preço de referência.",
+    "processTitle": "Como organizar",
+    "processDescription": "Os seis passos para organizar uma cremação com a Eternova a partir de casa.",
+    "faqTitle": "Perguntas frequentes",
+    "faqDescription": "Respostas sobre o que o serviço inclui, prazos, crematório e preços.",
+    "crematoriumsTitle": "Crematórios",
+    "crematoriumsDescription": "Crematórios associados em Santiago, Região Metropolitana.",
+    "aboutTitle": "Sobre a Eternova",
+    "aboutDescription": "A Eternova coordena a cremação para que você possa organizá-la a partir de casa.",
+    "contactTitle": "Contato",
+    "contactDescription": "Escreva, ligue ou envie um WhatsApp. Atendemos todos os dias, das 8:00 às 20:00.",
+    "privacyTitle": "Privacidade",
+    "privacyDescription": "Quais dados o formulário de contato pede e para que os usamos."
+  },
+  "nav": {
+    "home": "Eternova, início",
+    "services": "Nossos serviços",
+    "allServices": "Ver os três planos",
+    "faq": "Perguntas frequentes",
+    "crematoriums": "Crematórios",
+    "about": "Sobre a Eternova",
+    "contact": "Contato",
+    "call": "Ligar para +56 2 2345 6789",
+    "whatsapp": "WhatsApp",
+    "menu": "Menu",
+    "language": "Idioma",
+    "skip": "Ir para o conteúdo"
+  },
+  "footer": {
+    "tagline": "Uma despedida com sentido, uma memória que fica.",
+    "navLabel": "Rodapé",
+    "privacy": "Privacidade"
+  },
+  "home": {
+    "wordmark": "Eternova",
+    "title": "Mantemos as memórias por perto e ficamos durante a despedida.",
+    "lede": "Organize a cremação de alguém que você ama a partir de casa. Nós cuidamos do resto.",
+    "cta": "Organizar agora",
+    "script": "Porque o amor atravessa o tempo",
+    "servicesTitle": "Nossos serviços de cremação",
+    "servicesLede": "Três alternativas, a mesma tranquilidade.",
+    "priceNote": "Preço de referência. O valor se confirma quando você organiza o serviço.",
+    "crematoriumsTitle": "Nossos crematórios associados",
+    "crematoriumsLede": "Trabalhamos com crematórios autorizados em Santiago, Região Metropolitana.",
+    "crematoriumsPlace": "Santiago, RM",
+    "crematoriumsCta": "Mais informações",
+    "crematoriumsAlt": "Edifício contemporâneo de um crematório, com fachada de vidro e jardim.",
+    "helpTitle": "Precisa de ajuda?",
+    "helpLede": "Estamos aqui para acompanhar você.",
+    "call": "Ligue para nós",
+    "whatsapp": "Escreva no WhatsApp",
+    "hours": "Aberto de segunda a domingo, das 8:00 às 20:00."
+  },
+  "services": {
+    "title": "Escolha o serviço",
+    "lede": "Três planos de cremação individual.",
+    "more": "Ver detalhes",
+    "featured": "Mais escolhida",
+    "hire": "Organizar este plano",
+    "includes": "Este plano inclui",
+    "priceCaption": "Preço de referência",
+    "items": {
+      "basica": {
+        "name": "Cremação Básica",
+        "summary": "Essencial e acessível",
+        "imageAlt": "Pedras lisas empilhadas à beira da água.",
+        "features": [
+          "Coordenação da documentação",
+          "Gestão com um crematório associado",
+          "Cremação individual",
+          "Urna básica",
+          "Entrega das cinzas em domicílio"
+        ]
+      },
+      "signature": {
+        "name": "Cremação Signature",
+        "summary": "Mais cuidado, mais detalhe",
+        "imageAlt": "Uma vela acesa sobre uma pedra redonda.",
+        "features": [
+          "Tudo o que está incluído na Básica",
+          "Urna de categoria superior",
+          "Apresentação especial das cinzas",
+          "Acompanhamento personalizado",
+          "Entrega prioritária"
+        ]
+      },
+      "vip": {
+        "name": "Cremação VIP",
+        "summary": "Uma experiência premium",
+        "imageAlt": "Urna preta fosca com uma folha dourada.",
+        "features": [
+          "Tudo o que está incluído na Signature",
+          "Urna premium à escolha",
+          "Atendimento personalizado prioritário",
+          "Coordenação especial da entrega",
+          "Assistência durante todo o processo"
+        ]
+      }
+    }
+  },
+  "process": {
+    "title": "Como organizar uma cremação online?",
+    "lede": "É simples, claro e cuidadoso.",
+    "cta": "Ver o processo completo",
+    "pageLede": "Seis passos, nesta ordem. Hoje coordenamos documentos e pagamento com você por telefone ou WhatsApp.",
+    "steps": [
+      {
+        "title": "Escolha o serviço",
+        "text": "Escolha Básica, Signature ou VIP. Se ainda não tiver certeza, escreva para nós e ajudamos a comparar."
+      },
+      {
+        "title": "Deixe seus dados",
+        "text": "Informe nome, e-mail e telefone, e conte o que você precisa. Respondemos no horário de atendimento."
+      },
+      {
+        "title": "Envie os documentos",
+        "text": "Indicamos quais documentos são necessários e como enviá-los. O site ainda não tem envio de arquivos."
+      },
+      {
+        "title": "Pague por um canal seguro",
+        "text": "Confirmamos o valor do plano e a forma de pagamento. O site ainda não cobra online."
+      },
+      {
+        "title": "Nós coordenamos o resto",
+        "text": "Organizamos o crematório associado, a data e a cremação individual. Avisamos você antes de cada passo."
+      },
+      {
+        "title": "Receba as cinzas em casa",
+        "text": "Entregamos as cinzas no endereço que você indicar, conforme o plano escolhido."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "lede": "Respostas diretas sobre o serviço. Se a sua não estiver aqui, escreva para nós.",
+    "all": "Ver todas as perguntas",
+    "empty": "As perguntas estarão disponíveis em um momento.",
+    "items": [
+      {
+        "q": "O que o serviço inclui?",
+        "a": "Os três planos incluem coordenação de documentos, um crematório associado, cremação individual e entrega das cinzas em domicílio. Signature e VIP acrescentam outra urna, outra apresentação e uma coordenação mais próxima. O detalhe está em cada plano."
+      },
+      {
+        "q": "A cremação é individual?",
+        "a": "Sim. Cada plano inclui uma cremação individual."
+      },
+      {
+        "q": "Quanto tempo demora?",
+        "a": "A coordenação começa quando recebemos os documentos. A data é combinada com o crematório associado e confirmada com você antes de continuar. Não publicamos um prazo fixo, porque depende da documentação e da agenda do crematório."
+      },
+      {
+        "q": "Em qual crematório será feita?",
+        "a": "Em um crematório associado e autorizado em Santiago, Região Metropolitana. Dizemos qual é no momento de organizar o serviço."
+      },
+      {
+        "q": "Posso organizar isso de casa?",
+        "a": "Sim. Use o formulário, ligue ou envie um WhatsApp. O restante da coordenação também é feito à distância."
+      },
+      {
+        "q": "As cinzas são entregues em domicílio?",
+        "a": "Sim. Os três planos incluem a entrega das cinzas em domicílio. O plano VIP acrescenta uma coordenação especial dessa entrega."
+      },
+      {
+        "q": "O preço publicado é o final?",
+        "a": "Não. Os valores do site são de referência. O preço se confirma quando você organiza o serviço, segundo o plano escolhido."
+      }
+    ]
+  },
+  "crematoriums": {
+    "title": "Crematórios associados",
+    "lede": "A cremação acontece em um crematório autorizado de Santiago, Região Metropolitana. A Eternova coordena a data e as informações que precisam acompanhá-la.",
+    "place": "Santiago, RM",
+    "alt": "Edifício contemporâneo de um crematório, com fachada de vidro e jardim.",
+    "body": "Não publicamos um endereço enquanto o crematório do seu serviço não estiver confirmado. Quando você organiza o serviço, indicamos o lugar, a data e o que preparar.",
+    "point1": "Um crematório associado e autorizado.",
+    "point2": "A data é confirmada com você antes da cremação.",
+    "point3": "As cinzas voltam para a sua casa conforme o plano.",
+    "cta": "Consultar disponibilidade"
+  },
+  "about": {
+    "title": "Sobre a Eternova",
+    "lede": "Coordenamos a cremação para que você possa organizá-la a partir de casa, com um crematório associado em Santiago.",
+    "p1": "A Eternova assume a coordenação: documentos, contato com o crematório, cremação individual e entrega das cinzas na sua casa.",
+    "p2": "Você escolhe o plano. Nós dizemos o que falta, a data e como as cinzas voltam. O pagamento e os documentos são combinados com você por telefone ou WhatsApp.",
+    "p3": "Atendemos de segunda a domingo, das 8:00 às 20:00, por telefone, WhatsApp e o formulário de contato.",
+    "cta": "Escrever para a Eternova"
+  },
+  "contact": {
+    "title": "Contato",
+    "lede": "Conte o que você precisa. Respondemos de segunda a domingo, das 8:00 às 20:00.",
+    "channels": "Você também pode ligar ou escrever no WhatsApp.",
+    "call": "Ligar",
+    "whatsapp": "Escrever no WhatsApp",
+    "hours": "Aberto de segunda a domingo, das 8:00 às 20:00.",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "message": "Mensagem",
+      "plan": "Plano",
+      "planEmpty": "Ainda não escolhi um plano",
+      "namePlaceholder": "Maria Silva…",
+      "emailPlaceholder": "nome@email.com",
+      "phonePlaceholder": "+56 9 1234 5678",
+      "messagePlaceholder": "Conte como podemos ajudar…",
+      "submit": "Enviar mensagem",
+      "sending": "Enviando…",
+      "privacy": "Ao enviar, você aceita que usemos estes dados para responder.",
+      "privacyLink": "Ver privacidade",
+      "company": "Empresa",
+      "success": "Recebemos a sua mensagem. Vamos entrar em contato de segunda a domingo, das 8:00 às 20:00.",
+      "errors": {
+        "name": "Escreva o seu nome.",
+        "email": "Revise o e-mail. Use o formato nome@email.com.",
+        "phone": "Escreva um telefone com pelo menos 8 dígitos.",
+        "message": "Conte como podemos ajudar, com pelo menos uma frase.",
+        "send": "Não conseguimos enviar a mensagem. Ligue para +56 2 2345 6789 ou escreva no WhatsApp."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacidade",
+    "lede": "O formulário pede apenas o necessário para responder a você.",
+    "s1": "O que pedimos",
+    "p1": "Nome, e-mail, telefone, o plano se você já o escolheu e a mensagem que escreve. Se um campo oculto de empresa voltar preenchido, descartamos o envio. Ele filtra envios automáticos.",
+    "s2": "Para que usamos",
+    "p2": "Para responder à sua consulta e acompanhar o pedido. Se o e-mail de aviso estiver configurado, a equipe também recebe uma cópia.",
+    "s3": "Por quanto tempo",
+    "p3": "Guardamos a mensagem enquanto acompanhamos o seu pedido. Você pode pedir que a apaguemos pelos mesmos telefones ou pelo formulário.",
+    "s4": "Os seus direitos",
+    "p4": "Você pode pedir acesso, correção ou exclusão. No Chile, o marco de referência é a Lei 19.628 sobre proteção da vida privada. Este texto não substitui uma orientação jurídica.",
+    "s5": "Cookies",
+    "p5": "Guardamos neste navegador apenas a sua resposta sobre cookies, para não repetir a pergunta em cada visita. Não usamos cookies de publicidade nem de medição. Se você aceitar, essa autorização fica registrada. Se escolher só os necessários, nada mais é ativado. Você pode mudar a decisão quando quiser.",
+    "cta": "Escrever para exercer um direito"
+  },
+  "cookies": {
+    "label": "Cookies",
+    "body": "Guardamos a sua decisão neste navegador. Não ativamos cookies de medição nem de publicidade se você não os aceitar.",
+    "accept": "Aceitar",
+    "reject": "Só os necessários",
+    "privacy": "Ver privacidade",
+    "change": "Mudar a preferência de cookies"
+  },
+  "notFound": {
+    "title": "Não encontramos esta página",
+    "lede": "Este link não corresponde a uma página da Eternova.",
+    "cta": "Voltar ao início"
+  }
+}

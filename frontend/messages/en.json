@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "siteName": "Eternova",
+    "description": "Arrange a cremation from home, with associated crematoriums in Santiago.",
+    "heroAlt": "A white lily on a stone, with Santiago and the Andes at sunset.",
+    "homeTitle": "Cremation from home",
+    "homeDescription": "Arrange a cremation from home. Eternova coordinates documents, the crematorium, and the return of the ashes in Santiago.",
+    "servicesTitle": "Choose a service",
+    "servicesDescription": "Three individual cremation plans in Santiago: Basic, Signature, and VIP.",
+    "serviceDescription": "What the plan includes and the reference price.",
+    "processTitle": "How to arrange it",
+    "processDescription": "The six steps to arrange a cremation with Eternova from home.",
+    "faqTitle": "Frequently asked questions",
+    "faqDescription": "Answers about what is included, timing, the crematorium, and prices.",
+    "crematoriumsTitle": "Crematoriums",
+    "crematoriumsDescription": "Associated crematoriums in Santiago, Metropolitan Region.",
+    "aboutTitle": "About Eternova",
+    "aboutDescription": "Eternova coordinates the cremation so you can arrange it from home.",
+    "contactTitle": "Contact",
+    "contactDescription": "Write, call, or send a WhatsApp. We answer every day from 8:00 to 20:00.",
+    "privacyTitle": "Privacy",
+    "privacyDescription": "What the contact form asks for and how we use it."
+  },
+  "nav": {
+    "home": "Eternova, home",
+    "services": "Our services",
+    "allServices": "See the three plans",
+    "faq": "Frequently asked questions",
+    "crematoriums": "Crematoriums",
+    "about": "About Eternova",
+    "contact": "Contact",
+    "call": "Call +56 2 2345 6789",
+    "whatsapp": "WhatsApp",
+    "menu": "Menu",
+    "language": "Language",
+    "skip": "Skip to content"
+  },
+  "footer": {
+    "tagline": "A farewell with meaning, a memory that stays.",
+    "navLabel": "Footer",
+    "privacy": "Privacy"
+  },
+  "home": {
+    "wordmark": "Eternova",
+    "title": "We keep the memories close, and we stay through the farewell.",
+    "lede": "Arrange a cremation for someone you love from home. We take care of the rest.",
+    "cta": "Arrange now",
+    "script": "Because love outlasts time",
+    "servicesTitle": "Our cremation services",
+    "servicesLede": "Three choices, the same peace of mind.",
+    "priceNote": "Reference price. The amount is confirmed when you arrange the service.",
+    "crematoriumsTitle": "Our associated crematoriums",
+    "crematoriumsLede": "We work with authorized crematoriums in Santiago, Metropolitan Region.",
+    "crematoriumsPlace": "Santiago, RM",
+    "crematoriumsCta": "More information",
+    "crematoriumsAlt": "A contemporary crematorium building, with a glass front and a garden.",
+    "helpTitle": "Need help?",
+    "helpLede": "We are here to walk with you.",
+    "call": "Call us",
+    "whatsapp": "Write on WhatsApp",
+    "hours": "Open Monday to Sunday, 8:00 to 20:00."
+  },
+  "services": {
+    "title": "Choose a service",
+    "lede": "Three individual cremation plans.",
+    "more": "See details",
+    "featured": "Most chosen",
+    "hire": "Arrange this plan",
+    "includes": "This plan includes",
+    "priceCaption": "Reference price",
+    "items": {
+      "basica": {
+        "name": "Basic cremation",
+        "summary": "Essential and within reach",
+        "imageAlt": "Smooth stones stacked at the water’s edge.",
+        "features": [
+          "Document coordination",
+          "Coordination with an associated crematorium",
+          "Individual cremation",
+          "Basic urn",
+          "Ashes delivered to your home"
+        ]
+      },
+      "signature": {
+        "name": "Signature cremation",
+        "summary": "More care, more detail",
+        "imageAlt": "A lit candle on a round stone.",
+        "features": [
+          "Everything in Basic",
+          "A higher-category urn",
+          "A special presentation of the ashes",
+          "Personal accompaniment",
+          "Priority delivery"
+        ]
+      },
+      "vip": {
+        "name": "VIP cremation",
+        "summary": "A premium experience",
+        "imageAlt": "A matte black urn with a gold leaf.",
+        "features": [
+          "Everything in Signature",
+          "A premium urn of your choice",
+          "Priority personal attention",
+          "Special delivery coordination",
+          "Support through the whole process"
+        ]
+      }
+    }
+  },
+  "process": {
+    "title": "How do you arrange a cremation online?",
+    "lede": "It is simple, clear, and careful.",
+    "cta": "See the full process",
+    "pageLede": "Six steps, in this order. Today we coordinate documents and payment with you by phone or WhatsApp.",
+    "steps": [
+      {
+        "title": "Choose your service",
+        "text": "Pick Basic, Signature, or VIP. If you are unsure, write to us and we will help you compare."
+      },
+      {
+        "title": "Share your details",
+        "text": "Leave your name, email, and phone, and tell us what you need. We reply during opening hours."
+      },
+      {
+        "title": "Send the documents",
+        "text": "We tell you which records we need and how to send them. The site does not have a file upload yet."
+      },
+      {
+        "title": "Pay through a secure channel",
+        "text": "We confirm the plan amount and how to pay. The site does not charge online yet."
+      },
+      {
+        "title": "We coordinate the rest",
+        "text": "We arrange the associated crematorium, the date, and the individual cremation. We tell you before each step."
+      },
+      {
+        "title": "Receive the ashes at home",
+        "text": "We deliver the ashes to the address you give us, as part of the plan you chose."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "lede": "Direct answers about the service. If yours is missing, write to us.",
+    "all": "See all questions",
+    "empty": "Questions will be available in a moment.",
+    "items": [
+      {
+        "q": "What does the service include?",
+        "a": "All three plans include document coordination, an associated crematorium, an individual cremation, and home delivery of the ashes. Signature and VIP add a different urn, a different presentation, and closer coordination. The detail is on each plan."
+      },
+      {
+        "q": "Is the cremation individual?",
+        "a": "Yes. Every plan includes an individual cremation."
+      },
+      {
+        "q": "How long does it take?",
+        "a": "Coordination starts when we receive the documents. The date is agreed with the associated crematorium and confirmed with you before we continue. We do not publish a fixed number of days, because it depends on the paperwork and the crematorium’s schedule."
+      },
+      {
+        "q": "Which crematorium is used?",
+        "a": "An authorized associated crematorium in Santiago, Metropolitan Region. We tell you which one when you arrange the service."
+      },
+      {
+        "q": "Can I arrange this from home?",
+        "a": "Yes. Use the form, call, or send a WhatsApp. The rest of the coordination is also done at a distance."
+      },
+      {
+        "q": "Are the ashes delivered to my home?",
+        "a": "Yes. All three plans include home delivery of the ashes. The VIP plan adds special coordination for that delivery."
+      },
+      {
+        "q": "Is the published price final?",
+        "a": "No. The amounts on the site are a reference. The price is confirmed when you arrange the service, based on the plan you choose."
+      }
+    ]
+  },
+  "crematoriums": {
+    "title": "Associated crematoriums",
+    "lede": "The cremation takes place at an authorized crematorium in Santiago, Metropolitan Region. Eternova coordinates the date and the information that needs to travel with it.",
+    "place": "Santiago, RM",
+    "alt": "A contemporary crematorium building, with a glass front and a garden.",
+    "body": "We do not publish a street address until the crematorium for your service is confirmed. When you arrange it, we tell you the place, the date, and what to prepare.",
+    "point1": "An authorized associated crematorium.",
+    "point2": "The date is confirmed with you before the cremation.",
+    "point3": "The ashes return to your home according to the plan.",
+    "cta": "Ask about availability"
+  },
+  "about": {
+    "title": "About Eternova",
+    "lede": "We coordinate the cremation so you can arrange it from home, with an associated crematorium in Santiago.",
+    "p1": "Eternova takes the coordination: documents, contact with the crematorium, the individual cremation, and delivery of the ashes to your home.",
+    "p2": "You choose the plan. We tell you what is missing, the date, and how the ashes come back. Payment and documents are arranged with you by phone or WhatsApp.",
+    "p3": "We answer Monday to Sunday, 8:00 to 20:00, by phone, WhatsApp, and the contact form.",
+    "cta": "Write to Eternova"
+  },
+  "contact": {
+    "title": "Contact",
+    "lede": "Tell us what you need. We reply Monday to Sunday, 8:00 to 20:00.",
+    "channels": "You can also call or write on WhatsApp.",
+    "call": "Call",
+    "whatsapp": "Write on WhatsApp",
+    "hours": "Open Monday to Sunday, 8:00 to 20:00.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "plan": "Plan",
+      "planEmpty": "I have not chosen a plan",
+      "namePlaceholder": "María Pérez…",
+      "emailPlaceholder": "name@email.com",
+      "phonePlaceholder": "+56 9 1234 5678",
+      "messagePlaceholder": "Tell us how we can help…",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "privacy": "By sending, you agree that we use these details to reply.",
+      "privacyLink": "Read privacy",
+      "company": "Company",
+      "success": "We received your message. We will contact you Monday to Sunday, 8:00 to 20:00.",
+      "errors": {
+        "name": "Enter your name.",
+        "email": "Check the email. Use the form name@email.com.",
+        "phone": "Enter a phone number with at least 8 digits.",
+        "message": "Tell us how we can help, in at least one sentence.",
+        "send": "We could not send the message. Call +56 2 2345 6789 or write on WhatsApp."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy",
+    "lede": "The form asks only for what we need to reply.",
+    "s1": "What we ask",
+    "p1": "Name, email, phone, the plan if you already chose one, and the message you write. If a hidden company field comes back filled in, we discard the submission. It filters automated sends.",
+    "s2": "Why we use it",
+    "p2": "To answer your question and follow the request. If notification email is configured, the team also receives a copy.",
+    "s3": "How long",
+    "p3": "We keep the message while we are following your request. You can ask us to delete it through the same phone numbers or the form.",
+    "s4": "Your rights",
+    "p4": "You can ask for access, correction, or deletion. In Chile, the reference framework is Law 19.628 on the protection of private life. This text does not replace legal advice.",
+    "s5": "Cookies",
+    "p5": "We store only your cookie answer in this browser, so we do not ask again on every visit. We do not use advertising or measurement cookies. If you accept, that permission is recorded. If you choose only what is necessary, nothing else is turned on. You can change the decision whenever you want.",
+    "cta": "Write to use a right"
+  },
+  "cookies": {
+    "label": "Cookies",
+    "body": "We store your decision in this browser. We do not turn on measurement or advertising cookies unless you accept them.",
+    "accept": "Accept",
+    "reject": "Only necessary",
+    "privacy": "See privacy",
+    "change": "Change cookie preference"
+  },
+  "notFound": {
+    "title": "We cannot find this page",
+    "lede": "This link does not match a page on Eternova.",
+    "cta": "Back to the home page"
+  }
+}

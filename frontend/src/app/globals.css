@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #07182b;
+  --color-ink-soft: #12304d;
+  --color-gold: #c6a15b;
+  --color-gold-deep: #8c6a2f;
+  --color-cream: #f3eee4;
+  --color-paper: #fbf8f3;
+  --color-line: #e3d9c8;
+  --color-muted: #3e4a5c;
+  --color-danger: #8d2b2b;
+  --color-moss: #1d5c3a;
+  --font-display: var(--font-cormorant), "Iowan Old Style", Palatino, serif;
+  --font-sans: var(--font-figtree), "Segoe UI", sans-serif;
+  --font-script: var(--font-greatvibes), "Segoe Script", cursive;
+}
+
+html {
+  scroll-padding-top: 5.5rem;
+  color-scheme: light;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  scroll-margin-top: 5.5rem;
+}
+
+::selection {
+  background: #c6a15b;
+  color: #07182b;
+}
+
+:focus-visible {
+  outline: 2px solid #c6a15b;
+  outline-offset: 3px;
+}
+
+a,
+button,
+summary {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-copy {
+  animation: hero-rise 700ms ease both;
+}
+
+.faq-settle-down {
+  animation: faq-settle-down 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq-settle-up {
+  animation: faq-settle-up 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes faq-settle-down {
+  from {
+    opacity: 0;
+    transform: translateY(-0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes faq-settle-up {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-copy,
+  .faq-settle-down,
+  .faq-settle-up {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
