@@ -2,7 +2,22 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { localeCodes } from "@/lib/locales";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+function trimTrailingSlash(url: string) {
+  return url.replace(/\/$/, "");
+}
+
+/** URL pública del sitio (canonical, sitemap, OG). */
+export function siteOrigin(): string {
+  const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (configured && !/^https?:\/\/localhost(\b|:)/i.test(configured)) {
+    return trimTrailingSlash(configured);
+  }
+  const railway = process.env.RAILWAY_PUBLIC_DOMAIN?.trim();
+  if (railway) {
+    return `https://${railway}`;
+  }
+  return configured ? trimTrailingSlash(configured) : "http://localhost:3000";
+}
 
 const openGraphLocale: Record<string, string> = {
   es: "es_CL",
@@ -65,5 +80,5 @@ export async function pageMeta(
 }
 
 export function metadataBase() {
-  return new URL(siteUrl);
+  return new URL(siteOrigin());
 }

@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
-import { localizedPath } from "@/lib/seo";
+import { localizedPath, siteOrigin } from "@/lib/seo";
+
+export const dynamic = "force-dynamic";
 import { services } from "@/lib/site";
 
 const paths = [
@@ -18,7 +20,7 @@ const paths = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  const base = siteOrigin();
   return routing.locales.flatMap((locale) =>
     paths.map((path) => ({
       url: new URL(localizedPath(path, locale), base).toString(),
