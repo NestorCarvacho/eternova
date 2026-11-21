@@ -1,5 +1,7 @@
-from pydantic_settings import BaseSettings, SettingsConfigDict
 from pathlib import Path
+
+from pydantic import field_validator
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
@@ -13,6 +15,17 @@ class Settings(BaseSettings):
     smtp_password: str = ""
     smtp_from: str = ""
     contact_to: str = ""
+
+    @field_validator("database_url", mode="before")
+    @classmethod
+    def use_psycopg_driver(cls, value: object) -> object:
+        if not isinstance(value, str):
+            return value
+        if value.startswith("postgres://"):
+            value = "postgresql://" + value.removeprefix("postgres://")
+        if value.startswith("postgresql://"):
+            return "postgresql+psycopg://" + value.removeprefix("postgresql://")
+        return value
 
     @property
     def cors_origin_list(self) -> list[str]:

@@ -36,4 +36,14 @@ El sitio queda en `http://localhost`. `/api/health` responde desde la API. Postg
 
 La clave de Postgres del Compose es solo para desarrollo. Cámbiala antes de publicar. El aviso por correo se activa con `SMTP_HOST` y `CONTACT_TO` en el servicio `backend`.
 
+## Railway
+
+El sitio y la API viven en carpetas distintas. Railway necesita un servicio para cada uno.
+
+El servicio conectado a la raíz del repositorio publica el sitio con `railway.toml` y `deploy/Dockerfile.frontend`.
+
+Para la API, crea otro servicio del mismo repositorio y, en sus ajustes, apunta el archivo de configuración a `/backend/railway.toml`. Ese archivo no se aplica solo con cambiar el directorio raíz, porque Railway lee la configuración desde la raíz del repositorio.
+
+Agrega Postgres al servicio de la API. `DATABASE_URL` puede llegar como `postgresql://`; la API lo usa con el controlador de psycopg. En el servicio del sitio, `API_URL` es la URL interna de la API y `NEXT_PUBLIC_SITE_URL` es la URL pública del sitio. El correo sigue apagado hasta definir `SMTP_HOST` y `CONTACT_TO`.
+
 Los teléfonos y precios salen de la propuesta visual y hay que confirmarlos.
