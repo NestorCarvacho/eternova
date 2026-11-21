@@ -22,7 +22,7 @@ export async function ProcessBand({ detailed = false }: { detailed?: boolean }) 
           {detailed ? null : (
             <Link
               href="/proceso"
-              className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full border border-gold px-5 text-sm font-medium text-gold hover:bg-gold hover:text-ink"
+              className="motion-press mt-5 inline-flex min-h-11 items-center gap-2 rounded-full border border-gold px-5 text-sm font-medium text-gold hover:bg-gold hover:text-ink"
             >
               {t("cta")}
               <ArrowIcon />

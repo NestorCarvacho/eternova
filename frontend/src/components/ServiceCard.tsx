@@ -25,7 +25,7 @@ export function ServiceCard({
 }) {
   return (
     <article
-      className={`flex h-full flex-col rounded-2xl bg-paper ${
+      className={`service-card flex h-full flex-col rounded-2xl bg-paper ${
         service.featured
           ? "relative z-10 border-2 border-gold shadow-[0_18px_40px_rgba(7,24,43,0.12)] lg:scale-[1.07]"
           : "border border-line"
@@ -37,7 +37,7 @@ export function ServiceCard({
             {featuredLabel}
           </p>
         ) : null}
-        <div className="relative aspect-[4/3] overflow-hidden rounded-t-2xl">
+        <div className="service-card-media relative aspect-[4/3] overflow-hidden rounded-t-2xl">
           <Image
             src={service.image}
             alt={imageAlt}
@@ -65,7 +65,7 @@ export function ServiceCard({
         </ul>
         <Link
           href={`/servicios/${service.slug}`}
-          className={`mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 text-sm font-medium ${
+          className={`motion-press mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 text-sm font-medium ${
             service.featured
               ? "bg-ink text-paper hover:bg-ink-soft"
               : "border border-ink/15 text-ink hover:border-ink"

@@ -6,6 +6,7 @@ import { services } from "@/lib/site";
 const paths = [
   "/",
   "/servicios",
+  "/servicios/comparar",
   ...services.map((service) => `/servicios/${service.slug}`),
   "/proceso",
   "/preguntas-frecuentes",
@@ -13,6 +14,7 @@ const paths = [
   "/sobre-eternova",
   "/contacto",
   "/privacidad",
+  "/terminos",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

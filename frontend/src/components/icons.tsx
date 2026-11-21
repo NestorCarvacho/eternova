@@ -41,9 +41,42 @@ export function ArrowIcon() {
   );
 }
 
-export function CheckIcon() {
+export function ChevronLeftIcon({ className }: { className?: string }) {
+  const svgClass = className ? `size-5 shrink-0 ${className}` : "size-5 shrink-0";
   return (
-    <svg viewBox="0 0 20 20" className="mt-0.5 size-4 shrink-0 text-gold-deep" aria-hidden="true">
+    <svg viewBox="0 0 20 20" className={svgClass} aria-hidden="true">
+      <path
+        d="M12 4.5 6.5 10 12 15.5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function ChevronRightIcon({ className }: { className?: string }) {
+  const svgClass = className ? `size-5 shrink-0 ${className}` : "size-5 shrink-0";
+  return (
+    <svg viewBox="0 0 20 20" className={svgClass} aria-hidden="true">
+      <path
+        d="M8 4.5 13.5 10 8 15.5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function CheckIcon({ className }: { className?: string }) {
+  const svgClass = className ?? "mt-0.5 size-4 shrink-0 text-gold-deep";
+  return (
+    <svg viewBox="0 0 20 20" className={svgClass} aria-hidden="true">
       <path
         d="M4 10.5 8 14.5 16 6"
         fill="none"
@@ -51,6 +84,21 @@ export function CheckIcon() {
         strokeWidth="1.7"
         strokeLinecap="round"
         strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function XMarkIcon({ className }: { className?: string }) {
+  const svgClass = className ?? "size-4 shrink-0 text-muted";
+  return (
+    <svg viewBox="0 0 20 20" className={svgClass} aria-hidden="true">
+      <path
+        d="m6 6 8 8M14 6l-8 8"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
       />
     </svg>
   );

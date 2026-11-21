@@ -35,3 +35,15 @@ export type ServiceSlug = Service["slug"];
 export function findService(slug: string): Service | undefined {
   return services.find((service) => service.slug === slug);
 }
+
+export function adjacentServices(slug: string) {
+  const index = services.findIndex((service) => service.slug === slug);
+  if (index < 0) {
+    return { index: -1, prev: null, next: null };
+  }
+  return {
+    index,
+    prev: index > 0 ? services[index - 1] : null,
+    next: index < services.length - 1 ? services[index + 1] : null,
+  };
+}

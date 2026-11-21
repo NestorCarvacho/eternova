@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { FaqList } from "@/components/FaqList";
+import { RevealOnView } from "@/components/RevealOnView";
+import { StaggerChildren } from "@/components/StaggerChildren";
 import { ArrowIcon, ChatIcon, PhoneIcon } from "@/components/icons";
 import { ProcessBand } from "@/components/ProcessBand";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -47,7 +49,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <p className="mt-5 max-w-[42ch] text-lg leading-relaxed text-pretty text-paper/85">{t("lede")}</p>
             <Link
               href="/servicios"
-              className="mt-8 inline-flex min-h-11 items-center gap-2 rounded-full bg-gold px-6 text-sm font-medium text-ink hover:bg-[#d7b56d]"
+              className="motion-press mt-8 inline-flex min-h-11 items-center gap-2 rounded-full bg-gold px-6 text-sm font-medium text-ink hover:bg-[#d7b56d]"
             >
               {t("cta")}
               <ArrowIcon />
@@ -60,13 +62,16 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </section>
 
       <section className="mx-auto w-full max-w-[90rem] px-5 py-16 sm:px-8" aria-labelledby="servicios-titulo">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 id="servicios-titulo" className="font-display text-4xl text-balance text-ink sm:text-5xl">
-            {t("servicesTitle")}
-          </h2>
-          <p className="mt-3 text-muted">{t("servicesLede")}</p>
-        </div>
+        <RevealOnView>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 id="servicios-titulo" className="font-display text-4xl text-balance text-ink sm:text-5xl">
+              {t("servicesTitle")}
+            </h2>
+            <p className="mt-3 text-muted">{t("servicesLede")}</p>
+          </div>
+        </RevealOnView>
         <div className="mt-10 grid items-center gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.16fr)_minmax(0,0.9fr)] lg:gap-8">
+          <StaggerChildren>
           {services.map((service) => (
             <ServiceCard
               key={service.id}
@@ -80,21 +85,25 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               featuredLabel={servicesT("featured")}
             />
           ))}
+          </StaggerChildren>
         </div>
       </section>
 
-      <ProcessBand />
+      <RevealOnView>
+        <ProcessBand />
+      </RevealOnView>
 
       <section className="mx-auto grid w-full max-w-[90rem] gap-6 px-5 py-16 sm:px-8 xl:grid-cols-[1.15fr_0.95fr_0.8fr]">
+        <StaggerChildren stepMs={120}>
         <article className="flex h-full flex-col rounded-2xl border border-line bg-paper p-6 sm:p-8">
           <div className="mb-4 hidden justify-end xl:flex">
-            <Image src="/images/lily.jpg" alt="" width={120} height={160} className="h-28 w-auto rounded-xl object-cover" />
+            <Image src="/images/lily.jpg" alt={t("lilyAlt")} width={120} height={160} className="h-28 w-auto rounded-xl object-cover" />
           </div>
           <h2 className="font-display text-4xl text-ink">{faqT("title")}</h2>
           <div className="mt-4 flex-1">
             <FaqList items={items} empty={faqT("empty")} />
           </div>
-          <Link href="/preguntas-frecuentes" className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-ink">
+          <Link href="/preguntas-frecuentes" className="motion-press mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-ink">
             {faqT("all")}
             <ArrowIcon />
           </Link>
@@ -116,7 +125,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <p className="mt-4 text-sm font-medium text-ink">{t("crematoriumsPlace")}</p>
             <Link
               href="/crematorios"
-              className="mt-5 inline-flex min-h-11 items-center rounded-full border border-ink/15 px-5 text-sm font-medium hover:border-ink"
+              className="motion-press mt-5 inline-flex min-h-11 items-center rounded-full border border-ink/15 px-5 text-sm font-medium hover:border-ink"
             >
               {t("crematoriumsCta")}
             </Link>
@@ -152,6 +161,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <p className="mt-6 rounded-xl border border-gold/40 px-3 py-2 text-sm text-gold">{t("hours")}</p>
           </div>
         </aside>
+        </StaggerChildren>
       </section>
     </>
   );

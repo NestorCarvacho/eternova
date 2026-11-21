@@ -36,6 +36,10 @@ El sitio queda en `http://localhost`. `/api/health` responde desde la API. Postg
 
 La clave de Postgres del Compose es solo para desarrollo. Cámbiala antes de publicar. El aviso por correo se activa con `SMTP_HOST` y `CONTACT_TO` en el servicio `backend`.
 
+## Animación
+
+El pack [web-animation-skills](https://github.com/iart-ai/web-animation-skills) está en `.agents/skills/` (sub-skills `gsap-web`, `micro-interaction`, `accessible-animation`, etc.). En el front, el home usa `RevealOnView`, `StaggerChildren` y utilidades CSS (`motion-press`) con soporte de `prefers-reduced-motion`.
+
 ## Railway
 
 El sitio y la API viven en carpetas distintas. Railway necesita un servicio para cada uno.

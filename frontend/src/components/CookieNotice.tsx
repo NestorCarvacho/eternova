@@ -6,7 +6,6 @@ import { Link } from "@/i18n/navigation";
 import {
   COOKIE_CHOICE_EVENT,
   readCookieChoice,
-  requestCookieChoice,
   saveCookieChoice,
   type CookieChoice,
 } from "@/lib/cookies";
@@ -60,19 +59,5 @@ export function CookieNotice() {
         </div>
       </section>
     </div>
-  );
-}
-
-export function CookieSettingsButton() {
-  const t = useTranslations("cookies");
-
-  return (
-    <button
-      type="button"
-      onClick={requestCookieChoice}
-      className="inline-flex min-h-11 items-center rounded-full border border-gold px-5 text-sm font-medium text-ink hover:bg-gold"
-    >
-      {t("change")}
-    </button>
   );
 }

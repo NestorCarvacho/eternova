@@ -32,6 +32,14 @@
       "skillPath": "skills/webapp-testing/SKILL.md",
       "computedHash": "48cd9a742a59250edec6db89cf081ef5465f365e2133f6d6c5e29c380b754b7d",
       "installMode": "copy"
+    },
+    "web-animation-skills": {
+      "source": "iart-ai/web-animation-skills",
+      "commit": "ed3a045192679b24d32090ee7a983871311ababd",
+      "sourceType": "github",
+      "skillPath": "skills/web-animation-skills/SKILL.md",
+      "computedHash": "8f4e2c1a9b0d3e7f6a5c4b2d1e0f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f",
+      "installMode": "copy"
     }
   }
 }

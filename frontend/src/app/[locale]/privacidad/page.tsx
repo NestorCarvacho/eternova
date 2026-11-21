@@ -1,5 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { CookieSettingsButton } from "@/components/CookieNotice";
+import { CookieSettingsButton } from "@/components/CookieSettingsButton";
 import { PageHero } from "@/components/PageHero";
 import { Link } from "@/i18n/navigation";
 import { pageMeta } from "@/lib/seo";

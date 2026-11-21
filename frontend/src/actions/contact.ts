@@ -21,6 +21,11 @@ export async function submitContact(
     return { ok: true, message: t("success"), nonce: Date.now() };
   }
 
+  const startedAt = Number(formData.get("started_at"));
+  if (!Number.isFinite(startedAt) || Date.now() - startedAt < 2500) {
+    return fail("message", t("errors.send"));
+  }
+
   const name = String(formData.get("name") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
   const phone = String(formData.get("phone") ?? "").trim();

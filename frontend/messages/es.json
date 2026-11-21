@@ -7,6 +7,8 @@
     "homeDescription": "Contrata una cremación desde casa. Eternova coordina documentación, crematorio y entrega de cenizas en Santiago.",
     "servicesTitle": "Elige el servicio",
     "servicesDescription": "Tres planes de cremación individual en Santiago: Básica, Signature y VIP.",
+    "compareTitle": "Comparar planes",
+    "compareDescription": "Tabla comparativa de cremación Básica, Signature y VIP: qué incluye cada plan.",
     "serviceDescription": "Detalle del plan, lo que incluye y el precio referencial.",
     "processTitle": "Cómo contratar",
     "processDescription": "Los seis pasos para contratar una cremación con Eternova desde casa.",
@@ -19,12 +21,15 @@
     "contactTitle": "Contacto",
     "contactDescription": "Escríbenos, llámanos o envíanos un WhatsApp. Atendemos todos los días de 8:00 a 20:00.",
     "privacyTitle": "Privacidad",
-    "privacyDescription": "Qué datos pedimos en el formulario de contacto y para qué los usamos."
+    "privacyDescription": "Qué datos pedimos en el formulario de contacto y para qué los usamos.",
+    "termsTitle": "Términos y condiciones",
+    "termsDescription": "Condiciones del servicio de coordinación de cremación que ofrece Eternova."
   },
   "nav": {
     "home": "Eternova, inicio",
     "services": "Nuestros Servicios",
     "allServices": "Ver los tres planes",
+    "comparePlans": "Comparar planes",
     "faq": "Preguntas Frecuentes",
     "crematoriums": "Crematorios",
     "about": "Sobre Eternova",
@@ -38,7 +43,8 @@
   "footer": {
     "tagline": "Un adiós con sentido, una memoria para siempre.",
     "navLabel": "Pie de página",
-    "privacy": "Privacidad"
+    "privacy": "Privacidad",
+    "terms": "Términos"
   },
   "home": {
     "wordmark": "Eternova",
@@ -58,7 +64,8 @@
     "helpLede": "Estamos disponibles para acompañarte.",
     "call": "Llámanos",
     "whatsapp": "Escríbenos por WhatsApp",
-    "hours": "Atención de lunes a domingo, 8:00 a 20:00 h."
+    "hours": "Atención de lunes a domingo, 8:00 a 20:00 h.",
+    "lilyAlt": "Lirio blanco en primer plano, símbolo de recuerdo."
   },
   "services": {
     "title": "Elige el servicio",
@@ -66,7 +73,36 @@
     "more": "Conocer más",
     "featured": "Más elegida",
     "hire": "Contratar este plan",
+    "prevPlan": "Más accesible",
+    "nextPlan": "Plan superior",
+    "planNav": "Otros planes de cremación",
+    "swipeHint": "Desliza hacia los lados para ver otro plan.",
     "includes": "Este plan incluye",
+    "compare": {
+      "title": "Comparar planes",
+      "lede": "Los tres planes, lado a lado.",
+      "note": "Precio referencial en CLP. El monto se confirma al contratar.",
+      "caption": "Comparación de Cremación Básica, Signature y VIP",
+      "featureColumn": "Beneficio",
+      "included": "Incluido",
+      "notIncluded": "No incluido",
+      "cta": "Comparar planes",
+      "rows": {
+        "docs": "Coordinación de documentación",
+        "crematorium": "Gestión con crematorio asociado",
+        "individualCremation": "Cremación individual",
+        "homeDelivery": "Entrega de cenizas a domicilio",
+        "basicUrn": "Urna básica",
+        "superiorUrn": "Urna de categoría superior",
+        "premiumUrn": "Urna premium a elección",
+        "specialPresentation": "Presentación especial de las cenizas",
+        "personalSupport": "Acompañamiento personalizado",
+        "priorityDelivery": "Entrega prioritaria",
+        "priorityAttention": "Atención personalizada prioritaria",
+        "specialDeliveryCoord": "Coordinación especial de entrega",
+        "fullProcessSupport": "Asistencia durante todo el proceso"
+      }
+    },
     "priceCaption": "Precio referencial",
     "items": {
       "basica": {
@@ -214,8 +250,10 @@
       "messagePlaceholder": "Cuéntanos en qué podemos ayudarte…",
       "submit": "Enviar mensaje",
       "sending": "Enviando…",
-      "privacy": "Al enviar, aceptas que usemos estos datos para responderte.",
-      "privacyLink": "Ver privacidad",
+      "privacy": "Al enviar, aceptas que usemos estos datos para responderte, según la",
+      "privacyLink": "política de privacidad",
+      "termsLead": "y los",
+      "termsLink": "términos del servicio",
       "company": "Empresa",
       "success": "Recibimos tu mensaje. Te contactaremos de lunes a domingo, de 8:00 a 20:00 h.",
       "errors": {
@@ -239,12 +277,27 @@
     "s4": "Tus derechos",
     "p4": "Puedes pedir acceso, rectificación o eliminación de estos datos. En Chile, el marco de referencia es la Ley 19.628 sobre protección de la vida privada. Este texto no reemplaza una asesoría legal.",
     "s5": "Cookies",
-    "p5": "Guardamos en este navegador solo tu respuesta sobre cookies, para no repetir la pregunta en cada visita. No usamos cookies de publicidad ni de medición. Si aceptas, queda registrada esa autorización. Si eliges solo las necesarias, no se activa nada más. Puedes cambiar la decisión cuando quieras.",
+    "p5": "Guardamos en este navegador tu respuesta sobre cookies. Las necesarias recuerdan esa decisión. Si aceptas todas las cookies, podemos cargar Google Analytics (GA4) para estadísticas anónimas de visitas; si no hay ID de medición configurado, no se carga nada. No usamos cookies de publicidad. Puedes cambiar la decisión cuando quieras.",
     "cta": "Escribir para ejercer un derecho"
+  },
+  "terms": {
+    "title": "Términos y condiciones",
+    "lede": "Eternova coordina la cremación en Santiago. Estas condiciones describen qué puedes esperar al contratar.",
+    "s1": "Alcance del servicio",
+    "p1": "Eternova es un servicio de coordinación: gestión de documentación, contacto con un crematorio asociado, cremación individual según el plan contratado y entrega de cenizas. No somos un crematorio ni un cementerio.",
+    "s2": "Precios y contratación",
+    "p2": "Los montos publicados son referenciales y se confirman al contratar, por teléfono o WhatsApp. El pago y la firma de documentos se acuerdan contigo en ese canal; esta web no procesa pagos en línea en su versión actual.",
+    "s3": "Información y plazos",
+    "p3": "Los plazos dependen de la documentación disponible y de la disponibilidad del crematorio asociado. Te informamos fechas y requisitos antes de confirmar la cremación.",
+    "s4": "Responsabilidades",
+    "p4": "Tú declaras que la información entregada es veraz y que tienes facultad para encargar el servicio. Eternova actúa con diligencia en la coordinación; el acto de cremación lo realiza el crematorio autorizado.",
+    "s5": "Contacto y ley aplicable",
+    "p5": "Para dudas sobre estos términos usa el formulario de contacto o nuestros teléfonos publicados. El marco de consumo y protección de datos en Chile complementa este texto; no sustituye asesoría legal personalizada.",
+    "cta": "Consultar con Eternova"
   },
   "cookies": {
     "label": "Cookies",
-    "body": "Guardamos tu decisión en este navegador. No activamos cookies de medición ni de publicidad si no las aceptas.",
+    "body": "Guardamos tu decisión en este navegador. Las cookies de medición (Google Analytics) solo se activan si eliges aceptar todas y con fines estadísticos.",
     "accept": "Aceptar",
     "reject": "Solo las necesarias",
     "privacy": "Ver privacidad",
