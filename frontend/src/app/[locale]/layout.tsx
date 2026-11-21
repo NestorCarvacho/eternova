@@ -30,10 +30,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
+  const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
   return {
     metadataBase: metadataBase(),
     title: { default: t("homeTitle"), template: `%s · ${t("siteName")}` },
     description: t("description"),
+    ...(googleVerification
+      ? { verification: { google: googleVerification } }
+      : {}),
   };
 }
 
