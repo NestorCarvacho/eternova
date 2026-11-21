@@ -1,3 +1,10 @@
+@import "@fontsource/cormorant-garamond/latin-500.css";
+@import "@fontsource/cormorant-garamond/latin-600.css";
+@import "@fontsource/cormorant-garamond/latin-700.css";
+@import "@fontsource/figtree/latin-400.css";
+@import "@fontsource/figtree/latin-500.css";
+@import "@fontsource/figtree/latin-600.css";
+@import "@fontsource/great-vibes/latin-400.css";
 @import "tailwindcss";
 
 @theme {
@@ -11,9 +18,9 @@
   --color-muted: #3e4a5c;
   --color-danger: #8d2b2b;
   --color-moss: #1d5c3a;
-  --font-display: var(--font-cormorant), "Iowan Old Style", Palatino, serif;
-  --font-sans: var(--font-figtree), "Segoe UI", sans-serif;
-  --font-script: var(--font-greatvibes), "Segoe Script", cursive;
+  --font-display: "Cormorant Garamond", "Iowan Old Style", Palatino, serif;
+  --font-sans: "Figtree", "Segoe UI", sans-serif;
+  --font-script: "Great Vibes", "Segoe Script", cursive;
 }
 
 html {

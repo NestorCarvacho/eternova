@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { Cormorant_Garamond, Figtree, Great_Vibes } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -11,27 +10,6 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { routing } from "@/i18n/routing";
 import { metadataBase } from "@/lib/seo";
 import "../globals.css";
-
-const display = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-cormorant",
-  display: "swap",
-});
-
-const body = Figtree({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-figtree",
-  display: "swap",
-});
-
-const script = Great_Vibes({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-greatvibes",
-  display: "swap",
-});
 
 export const viewport: Viewport = {
   themeColor: "#07182b",
@@ -72,7 +50,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${display.variable} ${body.variable} ${script.variable}`}>
+    <html lang={locale}>
       <body className="bg-cream font-sans text-ink antialiased">
         <a
           href="#contenido"
