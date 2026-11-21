@@ -13,7 +13,9 @@ export async function POST(request: NextRequest) {
       headers: {
         "content-type": "application/json",
         accept: "application/json",
-        "x-forwarded-for": request.headers.get("x-forwarded-for") ?? "diagnostic",
+        ...(request.headers.get("x-forwarded-for")
+          ? { "x-forwarded-for": request.headers.get("x-forwarded-for")! }
+          : {}),
       },
       body,
       signal: AbortSignal.timeout(8000),

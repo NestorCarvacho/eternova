@@ -17,11 +17,7 @@ export function ContactForm({
   const [state, formAction, pending] = useActionState(submitContact, initialContactState);
   const formRef = useRef<HTMLFormElement>(null);
   const dirty = useRef(false);
-  const [startedAt, setStartedAt] = useState("");
-
-  useEffect(() => {
-    setStartedAt(String(Date.now()));
-  }, []);
+  const [startedAt] = useState(() => String(Date.now()));
 
   useEffect(() => {
     if (!state.field) return;

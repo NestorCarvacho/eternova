@@ -41,7 +41,8 @@ def create_contact(
     background: BackgroundTasks,
     db: Session = Depends(get_db),
 ) -> ContactOut:
-    if not allow_contact(client_ip(request)):
+    ip = client_ip(request)
+    if ip not in ("127.0.0.1", "::1") and not allow_contact(ip):
         raise HTTPException(status_code=429, detail="too_many_requests")
     lead = Lead(
         id=uuid.uuid4(),

@@ -2,7 +2,6 @@
 
 import { headers } from "next/headers";
 import { getLocale, getTranslations } from "next-intl/server";
-import { resolveBackendUrl } from "@/lib/backend-url";
 import { services } from "@/lib/site";
 import type { ContactField, ContactState } from "@/lib/contact";
 
@@ -49,38 +48,41 @@ export async function submitContact(
     return fail("message", t("errors.message"));
   }
 
-  const apiUrl = resolveBackendUrl();
   const requestHeaders = await headers();
-  const clientIp =
-    requestHeaders.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    requestHeaders.get("x-real-ip")?.trim() ||
-    "";
+  const port = process.env.PORT?.trim() || "3000";
+  const proxyHeaders: Record<string, string> = {
+    "content-type": "application/json",
+    accept: "application/json",
+  };
+  const forwarded = requestHeaders.get("x-forwarded-for");
+  const realIp = requestHeaders.get("x-real-ip");
+  if (forwarded) proxyHeaders["x-forwarded-for"] = forwarded;
+  else if (realIp) proxyHeaders["x-forwarded-for"] = realIp;
+
+  const payload = JSON.stringify({
+    name,
+    email,
+    phone,
+    message,
+    plan: plan || null,
+    locale,
+  });
 
   try {
-    const response = await fetch(`${apiUrl}/api/contact`, {
+    const response = await fetch(`http://127.0.0.1:${port}/api/contact`, {
       method: "POST",
-      headers: {
-        "content-type": "application/json",
-        accept: "application/json",
-        ...(clientIp ? { "x-forwarded-for": clientIp } : {}),
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        phone,
-        message,
-        plan: plan || null,
-        locale,
-      }),
+      headers: proxyHeaders,
+      body: payload,
       signal: AbortSignal.timeout(8000),
+      cache: "no-store",
     });
 
     if (!response.ok) {
-      console.error("[contact] API responded", response.status, apiUrl);
+      console.error("[contact] API responded", response.status);
       return { ok: false, message: t("errors.send"), nonce: Date.now() };
     }
   } catch (error) {
-    console.error("[contact] API unreachable", apiUrl, error);
+    console.error("[contact] API unreachable", error);
     return { ok: false, message: t("errors.send"), nonce: Date.now() };
   }
 
