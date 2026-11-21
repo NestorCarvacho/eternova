@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, type InputHTMLAttributes } from "react";
+import { useEffect, useRef, useState, type InputHTMLAttributes } from "react";
 import { useActionState } from "react";
 import { submitContact } from "@/actions/contact";
 import { initialContactState, type ContactLabels } from "@/lib/contact";
@@ -17,6 +17,11 @@ export function ContactForm({
   const [state, formAction, pending] = useActionState(submitContact, initialContactState);
   const formRef = useRef<HTMLFormElement>(null);
   const dirty = useRef(false);
+  const [startedAt, setStartedAt] = useState("");
+
+  useEffect(() => {
+    setStartedAt(String(Date.now()));
+  }, []);
 
   useEffect(() => {
     if (!state.field) return;
@@ -47,8 +52,9 @@ export function ContactForm({
       className="grid gap-4"
     >
       <div hidden>
-        <label htmlFor="company">Empresa</label>
+        <label htmlFor="company">{labels.company}</label>
         <input id="company" name="company" tabIndex={-1} autoComplete="off" />
+        <input type="hidden" name="started_at" value={startedAt} readOnly />
       </div>
 
       <Field
@@ -131,6 +137,16 @@ export function ContactForm({
         <a href={labels.privacyHref} className="underline decoration-gold-deep underline-offset-4">
           {labels.privacyLink}
         </a>
+        {labels.termsHref && labels.termsLink ? (
+          <>
+            {" "}
+            {labels.termsLead}{" "}
+            <a href={labels.termsHref} className="underline decoration-gold-deep underline-offset-4">
+              {labels.termsLink}
+            </a>
+            .
+          </>
+        ) : null}
       </p>
 
       <button

@@ -1,12 +1,13 @@
 import uuid
 
-from fastapi import APIRouter, BackgroundTasks, Depends
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Request
 from sqlalchemy.orm import Session
 
 from app.config import settings
 from app.db import SessionLocal, get_db
 from app.mail import send_lead_email
 from app.models import Lead
+from app.rate_limit import allow_contact
 from app.schemas import ContactIn, ContactOut
 
 router = APIRouter()
@@ -24,12 +25,24 @@ def deliver(lead_id: uuid.UUID) -> None:
         db.close()
 
 
+def client_ip(request: Request) -> str:
+    forwarded = request.headers.get("x-forwarded-for", "").split(",")[0].strip()
+    if forwarded:
+        return forwarded
+    if request.client:
+        return request.client.host
+    return "unknown"
+
+
 @router.post("/contact", response_model=ContactOut, status_code=201)
 def create_contact(
     payload: ContactIn,
+    request: Request,
     background: BackgroundTasks,
     db: Session = Depends(get_db),
 ) -> ContactOut:
+    if not allow_contact(client_ip(request)):
+        raise HTTPException(status_code=429, detail="too_many_requests")
     lead = Lead(
         id=uuid.uuid4(),
         name=payload.name,

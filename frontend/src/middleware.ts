@@ -8,7 +8,19 @@ function prefixed(pathname: string, locale: string) {
   return pathname === `/${locale}` || pathname.startsWith(`/${locale}/`);
 }
 
+function secureRedirect(request: NextRequest) {
+  if (process.env.NODE_ENV !== "production") return null;
+  const forwarded = request.headers.get("x-forwarded-proto");
+  if (forwarded !== "http") return null;
+  const url = request.nextUrl.clone();
+  url.protocol = "https:";
+  return NextResponse.redirect(url, 308);
+}
+
 export default function middleware(request: NextRequest) {
+  const forced = secureRedirect(request);
+  if (forced) return forced;
+
   const marked = request.headers.get(LOCALE_HEADER);
   if (marked && isLocale(marked)) {
     return NextResponse.next();

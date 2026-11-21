@@ -31,4 +31,8 @@ export type ContactLabels = {
   privacy: string;
   privacyHref: string;
   privacyLink: string;
+  termsLead?: string;
+  termsLink?: string;
+  termsHref?: string;
+  company?: string;
 };

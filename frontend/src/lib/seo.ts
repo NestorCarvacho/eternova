@@ -28,9 +28,18 @@ export async function pageMeta(
   const description = t(descriptionKey);
   const canonical = localizedPath(path, locale);
 
+  const openGraphTitle = `${title} · ${t("siteName")}`;
+  const image = {
+    url: "/images/hero.jpg",
+    width: 1200,
+    height: 675,
+    alt: t("heroAlt"),
+  };
+
   return {
     title,
     description,
+    robots: { index: true, follow: true },
     alternates: {
       canonical,
       languages: Object.fromEntries(
@@ -38,12 +47,19 @@ export async function pageMeta(
       ),
     },
     openGraph: {
-      title: `${title} · ${t("siteName")}`,
+      title: openGraphTitle,
       description,
+      siteName: t("siteName"),
       locale: openGraphLocale[locale] ?? "es_CL",
       type: "website",
       url: canonical,
-      images: [{ url: "/images/hero.jpg", width: 1200, height: 675, alt: t("heroAlt") }],
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: openGraphTitle,
+      description,
+      images: [image.url],
     },
   };
 }

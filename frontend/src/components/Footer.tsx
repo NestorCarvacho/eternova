@@ -12,6 +12,7 @@ export async function Footer() {
     { href: "/crematorios" as const, label: nav("crematoriums") },
     { href: "/contacto" as const, label: nav("contact") },
     { href: "/privacidad" as const, label: t("privacy") },
+    { href: "/terminos" as const, label: t("terms") },
   ];
 
   return (

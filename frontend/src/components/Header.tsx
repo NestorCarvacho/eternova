@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "@/components/Logo";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import { MobileMenu } from "@/components/MobileMenu";
 import { services, site } from "@/lib/site";
 
 const linkClass =
@@ -39,6 +40,9 @@ export async function Header() {
                   <Link href="/servicios" className="block rounded-xl px-3 py-2 text-sm hover:bg-cream">
                     {t("allServices")}
                   </Link>
+                  <Link href="/servicios/comparar" className="block rounded-xl px-3 py-2 text-sm hover:bg-cream">
+                    {t("comparePlans")}
+                  </Link>
                   {services.map((service) => (
                     <Link
                       key={service.slug}
@@ -72,46 +76,23 @@ export async function Header() {
             {t("whatsapp")}
           </a>
           <LocaleSwitcher label={t("language")} />
-          <details className="relative min-[1120px]:hidden">
-            <summary
-              aria-label={t("menu")}
-              className="grid size-11 cursor-pointer place-items-center rounded-full border border-gold/40"
-            >
-              <span aria-hidden="true" className="flex w-4 flex-col gap-1">
-                <span className="h-px bg-paper" />
-                <span className="h-px bg-paper" />
-                <span className="h-px bg-paper" />
-              </span>
-            </summary>
-            <nav
-              aria-label={t("menu")}
-              className="absolute right-0 z-50 mt-2 w-72 rounded-2xl border border-line bg-paper p-3 text-ink shadow-[0_16px_40px_rgba(7,24,43,0.16)]"
-            >
-              <Link href="/servicios" className="block rounded-xl px-3 py-2 hover:bg-cream">
-                {t("services")}
-              </Link>
-              {services.map((service) => (
-                <Link
-                  key={service.slug}
-                  href={`/servicios/${service.slug}`}
-                  className="block rounded-xl px-3 py-2 pl-6 text-sm text-muted hover:bg-cream"
-                >
-                  {plans(`${service.id}.name`)}
-                </Link>
-              ))}
-              {links.map((link) => (
-                <Link key={link.href} href={link.href} className="block rounded-xl px-3 py-2 hover:bg-cream">
-                  {link.label}
-                </Link>
-              ))}
-              <a href={site.phoneHref} className="mt-1 block whitespace-nowrap rounded-xl px-3 py-2 tabular-nums hover:bg-cream">
-                {site.phoneDisplay}
-              </a>
-              <a href={site.whatsappHref} className="block rounded-xl px-3 py-2 hover:bg-cream">
-                {t("whatsapp")}
-              </a>
-            </nav>
-          </details>
+          <MobileMenu
+            menuLabel={t("menu")}
+            phoneHref={site.phoneHref}
+            phoneDisplay={site.phoneDisplay}
+            whatsappHref={site.whatsappHref}
+            whatsappLabel={t("whatsapp")}
+            items={[
+              { href: "/servicios", label: t("services") },
+              { href: "/servicios/comparar", label: t("comparePlans") },
+              ...services.map((service) => ({
+                href: `/servicios/${service.slug}`,
+                label: plans(`${service.id}.name`),
+                indent: true,
+              })),
+              ...links.map((link) => ({ href: link.href, label: link.label })),
+            ]}
+          />
         </div>
       </div>
     </header>

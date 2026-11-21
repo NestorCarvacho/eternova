@@ -65,6 +65,10 @@ export default async function ContactPage({
             privacy: form("privacy"),
             privacyHref: localizedPath("/privacidad", locale),
             privacyLink: form("privacyLink"),
+            termsLead: form("termsLead"),
+            termsLink: form("termsLink"),
+            termsHref: localizedPath("/terminos", locale),
+            company: form("company"),
           }}
         />
       </section>

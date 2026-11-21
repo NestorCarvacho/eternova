@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { Analytics } from "@/components/Analytics";
 import { CookieNotice } from "@/components/CookieNotice";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -64,6 +65,7 @@ export default async function LocaleLayout({
           <Footer />
           <WhatsAppFloat />
           <CookieNotice />
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>
