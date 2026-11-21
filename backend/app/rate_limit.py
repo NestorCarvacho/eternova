@@ -3,7 +3,7 @@ from collections import defaultdict
 from threading import Lock
 
 _window_s = 60.0
-_max_hits = 8
+_max_hits = 30
 _hits: dict[str, list[float]] = defaultdict(list)
 _lock = Lock()
 

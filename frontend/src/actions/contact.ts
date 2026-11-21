@@ -1,5 +1,6 @@
 "use server";
 
+import { headers } from "next/headers";
 import { getLocale, getTranslations } from "next-intl/server";
 import { resolveBackendUrl } from "@/lib/backend-url";
 import { services } from "@/lib/site";
@@ -49,11 +50,20 @@ export async function submitContact(
   }
 
   const apiUrl = resolveBackendUrl();
+  const requestHeaders = await headers();
+  const clientIp =
+    requestHeaders.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    requestHeaders.get("x-real-ip")?.trim() ||
+    "";
 
   try {
     const response = await fetch(`${apiUrl}/api/contact`, {
       method: "POST",
-      headers: { "content-type": "application/json", accept: "application/json" },
+      headers: {
+        "content-type": "application/json",
+        accept: "application/json",
+        ...(clientIp ? { "x-forwarded-for": clientIp } : {}),
+      },
       body: JSON.stringify({
         name,
         email,
