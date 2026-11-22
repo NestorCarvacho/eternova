@@ -10,11 +10,18 @@ Tras el deploy con `deploy/Dockerfile.railway`, la API corre en el mismo contene
 
 Sin Postgres, los mensajes se guardan en SQLite dentro del contenedor y se pierden al redesplegar.
 
-## Sitio público
+## Sitio público y SEO
 
 ```env
 NEXT_PUBLIC_SITE_URL=https://eternova-production.up.railway.app
 ```
+
+Si no la defines, el sitemap y `robots.txt` usan `RAILWAY_PUBLIC_DOMAIN` (ya funciona en producción).
+
+- **Sitemap:** `https://eternova-production.up.railway.app/sitemap.xml`
+- **Robots:** `https://eternova-production.up.railway.app/robots.txt`
+
+En [Google Search Console](https://search.google.com/search-console) → Sitemaps → añade la URL del sitemap.
 
 ## Correo (formulario → bandeja)
 
